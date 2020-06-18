@@ -1,0 +1,5 @@
+steps:
+
+  # Deploy container to app engine
+  - name: "gcr.io/cloud-builders/gcloud"
+    args: ["app", "deploy", "--image-url=gcr.io/${PROJECT_ID}/go-todo:${COMMIT_SHA}"]
